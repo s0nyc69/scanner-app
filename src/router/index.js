@@ -1,21 +1,18 @@
-import Vue from 'vue'
-import { IonicVueRouter } from '@ionic/vue'
-import Home from '../views/Home.vue'
-
-Vue.use(IonicVueRouter)
+import { createRouter, createWebHistory } from '@ionic/vue-router';
+import { RouteRecordRaw } from 'vue-router';
+import HomePage from '@/views/Home.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
-  }
+    component: HomePage
+  },
 ]
 
-const router = new IonicVueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
-export default router
+export default router;
