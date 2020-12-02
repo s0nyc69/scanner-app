@@ -27,11 +27,11 @@
         </ion-card-content>
       </ion-card>
     </ion-content>
-    <ion-content>
-      <qrcode-stream></qrcode-stream>
-      <qrcode-drop-zone></qrcode-drop-zone>
-      <qrcode-capture></qrcode-capture>
-    </ion-content>
+<!--    <ion-content>-->
+<!--      <qrcode-stream></qrcode-stream>-->
+<!--      <qrcode-drop-zone></qrcode-drop-zone>-->
+<!--      <qrcode-capture></qrcode-capture>-->
+<!--    </ion-content>-->
   </ion-page>
 </template>
 
@@ -49,7 +49,7 @@ import {
 } from "@ionic/vue";
 
 // @ts-ignore
-import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'vue-qrcode-reader';
+// import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'vue-qrcode-reader';
 
 import { Plugins, CameraSource, CameraResultType } from "@capacitor/core";
 const { Camera } = Plugins;
@@ -69,9 +69,9 @@ export default defineComponent({
     IonTitle,
     IonToolbar,
     IonButton,
-    QrcodeStream,
-    QrcodeDropZone,
-    QrcodeCapture
+    // QrcodeStream,
+    // QrcodeDropZone,
+    // QrcodeCapture
   },
   setup() {
     const imageUrl = ref<string | null>();
